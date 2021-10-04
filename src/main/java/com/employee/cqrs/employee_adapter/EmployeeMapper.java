@@ -51,9 +51,17 @@ public class EmployeeMapper {
         employee.setLocation(employeeDto.getLocation());
         employee.setEmpName(employeeDto.getEmpName());
         employee.setDeptId(employeeDto.getDeptId());
-        employee.setEmailId(employee.getEmailId());
+        employee.setEmailId(employeeDto.getEmailId());
+        employee.setPassword(employeeDto.getPassword());
         return employee;
 
+    }
+
+    public LoginDetails createLoginDetails(EmployeeDto employeeDto) {
+        LoginDetails loginDetails = new LoginDetails();
+        loginDetails.setEmailId(employeeDto.getEmailId());
+        loginDetails.setPassword(employeeDto.getPassword());
+        return loginDetails;
     }
 
 

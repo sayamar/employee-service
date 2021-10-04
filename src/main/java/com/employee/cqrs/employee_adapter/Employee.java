@@ -1,5 +1,7 @@
 package com.employee.cqrs.employee_adapter;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 
@@ -17,6 +19,9 @@ public class Employee {
     private String city;
     private String location;
     private String contactNo;
+    @NotNull
+    private String password;
+    @NotNull
     private String emailId;
 
     public Long getEmpId() {
@@ -89,5 +94,13 @@ public class Employee {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

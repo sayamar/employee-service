@@ -15,4 +15,5 @@ public class EmployeeDto {
     private String location;
     private String contactNo;
     private String emailId;
+    private String password;
 }
